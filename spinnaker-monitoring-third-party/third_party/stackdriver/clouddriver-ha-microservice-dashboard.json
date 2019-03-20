@@ -1,0 +1,155 @@
+{
+  "revision": 0,
+  "displayName": "Clouddriver (HA) Microservice",
+  "root": {
+    "rowLayout": {
+      "rows": [
+        {
+          "widgets": [
+            {
+              "title": "Clouddriver Invocations (success)",
+              "xyChart": {
+                "dataSets": [
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro/controller.invocations__count\" AND metric.label.status=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro-deck/controller.invocations__count\" AND metric.label.status=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-rw/controller.invocations__count\" AND metric.label.status=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-caching/controller.invocations__count\" AND metric.label.status=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  }
+                ],
+                "constantLines": [
+                  {}
+                ],
+                "options": {},
+                "y1Axis": {},
+                "xAxis": {}
+              }
+            },
+            {
+              "title": "Clouddriver Invocations (failure)",
+              "xyChart": {
+                "dataSets": [
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro/controller.invocations__count\" AND metric.label.status!=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro-deck/controller.invocations__count\" AND metric.label.status!=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-rw/controller.invocations__count\" AND metric.label.status!=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-caching/controller.invocations__count\" AND metric.label.status!=\"2xx\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  }
+                ],
+                "constantLines": [
+                  {}
+                ],
+                "options": {},
+                "y1Axis": {},
+                "xAxis": {}
+              }
+            }
+          ]
+        },
+
+        {
+          "widgets": [
+            {
+              "title": "Clouddriver Operations (success)",
+              "xyChart": {
+                "dataSets": [
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver/operations__count\" AND metric.label.success=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  }
+                ],
+                "constantLines": [
+                  {}
+                ],
+                "options": {},
+                "y1Axis": {},
+                "xAxis": {}
+              }
+            },
+            {
+              "title": "Clouddriver Operations (failure)",
+              "xyChart": {
+                "dataSets": [
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver/operations__count\" AND metric.label.success!=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  }
+                ],
+                "constantLines": [
+                  {}
+                ],
+                "options": {},
+                "y1Axis": {},
+                "xAxis": {}
+              }
+            }
+          ]
+        },
+
+        {
+          "widgets": [
+            {
+              "title": "JVM Memory (clouddriver)",
+              "xyChart": {
+                "dataSets": [
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver/jvm.memory.used\" AND metric.label.memtype=\"HEAP\"",
+                      "perSeriesAligner": "ALIGN_MEAN"
+                    }
+                  }
+                ],
+                "constantLines": [
+                  {}
+                ],
+                "options": {},
+                "y1Axis": {},
+                "xAxis": {}
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
