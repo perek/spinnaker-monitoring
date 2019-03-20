@@ -91,7 +91,25 @@
                 "dataSets": [
                   {
                     "timeSeriesFilter": {
-                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver/operations__count\" AND metric.label.success=\"true\"",
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro/operations__count\" AND metric.label.success=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro-deck/operations__count\" AND metric.label.success=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-rw/operations__count\" AND metric.label.success=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-caching/operations__count\" AND metric.label.success=\"true\"",
                       "perSeriesAligner": "ALIGN_DELTA"
                     }
                   }
@@ -110,7 +128,25 @@
                 "dataSets": [
                   {
                     "timeSeriesFilter": {
-                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver/operations__count\" AND metric.label.success!=\"true\"",
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro/operations__count\" AND metric.label.success!=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro-deck/operations__count\" AND metric.label.success!=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-rw/operations__count\" AND metric.label.success!=\"true\"",
+                      "perSeriesAligner": "ALIGN_DELTA"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-caching/operations__count\" AND metric.label.success!=\"true\"",
                       "perSeriesAligner": "ALIGN_DELTA"
                     }
                   }
@@ -134,7 +170,25 @@
                 "dataSets": [
                   {
                     "timeSeriesFilter": {
-                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver/jvm.memory.used\" AND metric.label.memtype=\"HEAP\"",
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro/jvm.memory.used\" AND metric.label.memtype=\"HEAP\"",
+                      "perSeriesAligner": "ALIGN_MEAN"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-ro-deck/jvm.memory.used\" AND metric.label.memtype=\"HEAP\"",
+                      "perSeriesAligner": "ALIGN_MEAN"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-rw/jvm.memory.used\" AND metric.label.memtype=\"HEAP\"",
+                      "perSeriesAligner": "ALIGN_MEAN"
+                    }
+                  },
+                  {
+                    "timeSeriesFilter": {
+                      "filter": "metric.type=\"custom.googleapis.com/spinnaker/clouddriver-caching/jvm.memory.used\" AND metric.label.memtype=\"HEAP\"",
                       "perSeriesAligner": "ALIGN_MEAN"
                     }
                   }
